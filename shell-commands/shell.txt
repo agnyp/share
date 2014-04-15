@@ -1,0 +1,3 @@
+#
+# find all directories in current path and create a soft-link for each and every one of them
+find . -maxdepth 1 -mindepth 1 -type d -printf "%f\n" -exec ln -s ~/dev/common/plugins/'{}' ~/dev/ada/rails/vendor/plugins/'{}' \;
